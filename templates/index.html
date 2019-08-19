@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cool Band Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img.png') }}">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/mobile.css">
+</head>
+
+<body>
+
+
+    <header>
+        <!-- Navigation -->
+        <div class="container-fluid p-0">
+            <!-- Navigation bar -->
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-headphones-alt"></i>
+                    Da Plug</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="mr-auto"></div>
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#Merch">Merch</a>
+                        <a class="nav-item nav-link" href="#Tour">Tour</a>
+                        <a class="nav-item nav-link" href="#Listen">Listen</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <h6>Stream your favorite Artists</h6>
+                    <h1>Welcome to Da Plug Music Room!</h1>
+                    <p>The place where you can stream your favortie music, purchase cool gear, & enter tour dates for
+                        your favorite artist
+                    </p>
+                    <a href="#Listen"><button class="btn btn-dark px-5 py-2">Listen</button></a>
+                </div>
+                <div class="col-md-5 col-sm-12 h-25">
+                    <img src="../img/pngfind_headph.png" alt="headphones" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-1">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="statue">
+                            <img src="../img/art-blue-color-2609760.jpg" alt="statue" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel text-left">
+                            <h1>Find your favorite artists</h1>
+                            <p class="pt-4">
+                                Curabitur funky fresh dizzle quizzle nisi rizzle shizznit. Fo shizzle potenti. Crunk
+                                odio. Tellivizzle neque. Cras daahng dawg. Cras maurizzle dope, shizzle my nizzle
+                                crocodizzle a, shizzlin dizzle phat amet, shut the shizzle up izzle, owned. Pellentesque
+                                gravida. Gangsta sure mi, volutpat izzle, phat sizzle, bling bling sempizzle, sizzle.
+                                Crizzle in ipsizzle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 2 -->
+        <section class="section-2 container-fluid p-0">
+            <a name="Tour"></a>
+            <div class="cover">
+                <div class="content text-center">
+                    <h1>Tour Dates</h1>
+                    <!-- <p>Add your favorite artists tour dates</p> -->
+                </div>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+                    <div class="rect">
+                        <h3>Beyonce</h3>
+                        <p>Date: 09/27/19</p>
+                        <p>City: Austin, Tx</p>
+                    </div>
+                    <div class="rect">
+                        <h3>iHeart Music End of Summer Bash</h3>
+                        <p>Date: 08/31/2019</p>
+                        <p>City: New York, NY</p>
+                    </div>
+                    <div class="rect">
+                        <h3>Kendrick Lemar</h3>
+                        <p>Date: 10/11/19</p>
+                        <p>City: Chicago, IL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="purchase text-center">
+                <a name="Merch"></a>
+                <h1>Purchase Merch</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quas.</p>
+                <div class="cards">
+                    <div class="d-flex flex-row justify-content-center flex-wrap">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="../img/beats-bg.jpg" alt="Beats by Dre">
+                                <div class="title">
+                                    <h5 class="card-title">PDF</h5>
+                                </div>
+                                <P class="card-text">Lorem ipsum dolor sit amet.</P>
+                                <div class="pricing">
+                                    <h1>$349.99</h1>
+                                    <!-- <a href="#" class="btn btn-danger px-5 py-2 mb-5">Purchase Now</a> -->
+                                    <script src="https://js.stripe.com/v3/"></script>
+                                    <form action="/charge" method="post" id="payment-form">
+                                        <div class="form-row">
+                                            <label for="card-element"></label>
+                                            <div id="card-element">
+                                                <!-- A Stripe Element will be inserted here. -->
+                                            </div>
+
+                                            <!-- Used to display form errors. -->
+                                            <div id="card-errors" role="alert"></div>
+                                        </div>
+                                        <button class="btn btn-danger px-5 py-2 mb-5">Submit Payment</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class=" section-3 container-fluid p-0 text-center">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <a name="Listen"></a>
+                    <h1>Click Play to Stream</h1>
+                    <p>Powered by</p>
+                </div>
+            </div>
+            <div class="platform row">
+                <div class="col-md-6 col-sm-12 text-right">
+                    <div class="desktop shadow-lg">
+                        <div class="d-flex flew-row justify-content-center">
+                            <i class="fab fa-soundcloud fa-3x py-2 pr-3"></i>
+                            <div class="text text-left">
+                                <h3 class="pt-1 m-0">Soundcloud</h3>
+                                <!-- <p class="p-0 m-0">Start Streaming</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- About -->
+        <!-- <div class="container-fluid p-0">
+            <div class="row text-left">
+                <div class="col-md-5 col-sm-5">
+                    <h4 class="text-light">About Us</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit, ameticing elit.</p>
+                    <p class="pt-4 text-muted">
+                        Copyright ©2019 All rights reserved | This template was made by
+                        <span>KaMill</span>
+                    </p>
+                </div>
+            </div> -->
+
+        <!-- Subscribe -->
+        <!-- <div class="col-md-5">
+            {% with messages = get_flashed_messages(category_filter=["subscribe"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="error">{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <h4 class="text-light">Subscribe</h4>
+            <div class="text-muted">Subscribe for all day streaming</div>
+            <form action="/subscribe" class="form-inline">
+                <div class="col pl-0">
+                    <div class="input-group pr-5">
+                        <input type="text" class="form-control bg-dark text-white" placeholder="Email">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+        <!-- Social Media -->
+        <div class="col-md-2 col-sm-12">
+            <h4 class="text-light"> Follow Us</h4>
+            <p class="text-muted">Let us be social</p>
+            <div class="column">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-5 col-md-5">
+            <p class="pt-4 text-muted">
+                Copyright ©2019 All rights reserved. This template was made by
+                <span>KaMill</span>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>
