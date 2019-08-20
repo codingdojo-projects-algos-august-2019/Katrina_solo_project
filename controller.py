@@ -7,13 +7,40 @@ from models import User, Tour
 def index():
     return render_template("index.html")
 
-
-@app.route("/subscribe")
-def subscribe():
-    is_valid = User.validate_subscription(request.form)
+@app.route("/edit")
+def edit():
+    is_valid = Tour.validate_edit(request.form)
     if is_valid:
-        new_user = User.add_new_user(request.form)
-        session["user_id"] = new_user.id
+        print(request.form)
+        edit_tour = Tour.query.get(session["tour_id"])
+        print("*"*40)
+        print(edit_tour)
+        edit.artist= request.form['artist']
+        edit.date= request.form['date']
+        edit.city= request.form['city']
+        db.session.commit()
         return redirect("/")
     else:
-        return redirect("/")
+        return render_template("edit.html")
+
+
+# @app.route("/edit")
+# def edit(id):
+#     if 'user_id' not in session:
+#         return redirect("/")
+#     else:
+#         logged_in = Tour.query.get(session["session_id"])
+#         print("*"*30)
+#         return render_template("edit.html", user=logged_in)
+
+
+
+# @app.route("/subscribe")
+# def subscribe():
+#     is_valid = User.validate_subscription(request.form)
+#     if is_valid:
+#         new_user = User.add_new_user(request.form)
+#         session["user_id"] = new_user.id
+#         return redirect("/")
+#     else:
+#         return redirect("/")

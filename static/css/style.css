@@ -159,7 +159,7 @@ header .container .col-md-7 button {
     z-index: 1;
     background: #FFFFFF;
     width: 17rem;
-    height: 12rem;
+    height: auto;
     padding-top: 3.5vmin;
     margin: 1rem;
     border-radius: .5em;
@@ -202,6 +202,7 @@ header .container .col-md-7 button {
 
 .card {
     border-radius: 30px;
+    width: 500px;
     box-shadow: 1px 2px 50px 0px rgb(12, 206, 107);
     margin-bottom: 15vmin;
 }
@@ -212,13 +213,14 @@ header .container .col-md-7 button {
 }
 
 .section-3 {
-    height: 70vmin;
-    margin-top: 5vmin;
+    height: 50vmin;
+    margin-top: 3vmin;
     background: var(--oggradient);
 }
 
-.section-3 .col-md-12>h1 {
-    padding: 2em 0 0.5em 0;
+.section-3 .col-md-12>h3 {
+    font-family: var(--Open-sans-condensed);
+    padding: 1em 0 0.5em 0;
     color: whitesmoke;
     font-size: 6vmin;
 }
@@ -289,9 +291,11 @@ footer .column i+i {
 .StripeElement {
     box-sizing: border-box;
 
+    width: 100%;
     height: 40px;
 
     padding: 10px 12px;
+    margin: 20px;
 
     border: 1px solid transparent;
     border-radius: 4px;

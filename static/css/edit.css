@@ -1,0 +1,41 @@
+/*Google Font*/
+@import url('https://fonts.googleapis.com/css?family=Lexend+Tera|Montserrat|Open+Sans+Condensed:300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+section {
+    overflow: hidden;
+}
+
+:root {
+    --Monserrat: "Monserrat", sans-serif;
+    --Lexend-tera: "Lexend-tera", sans-serif;
+    --Open-sans-condensed: "Open Sans Condensed", sans-serif;
+    --light-black: #2e2c2caf;
+    --yellow: #FFFFFF;
+    --bggradient: linear-gradient(to bottom, #dd2476, #ff512f);
+    --oggradient: linear-gradient(to bottom, #3D348B, #0CCE6B);
+    --light-gray: rgba(255, 255, 255, 0);
+}
+
+/** Edit Html */
+
+body {
+    background: var(--light-gray);
+    margin: 0 auto;
+}
+
+label {
+    font-family: var(--Monserrat);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(53, 49, 49);
+}
+
+.btn {
+    border-radius: 30px;
+    font-weight: bold;
+}

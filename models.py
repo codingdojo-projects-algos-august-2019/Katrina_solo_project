@@ -39,3 +39,30 @@ class Tour(db.Model):
     created_at = db.Column(db.DateTime, server_default=func.now())
     updated_at = db.Column(
         db.DateTime, server_default=func.now(), onupdate=func.now())
+
+    @classmethod
+    def edit_tour(cls, edit_tour_data):
+        print(session['user_id'])
+        edit_tour = cls(tour_id = session["tour_id"], artist=edit_tour_data['artist'], date=edit_tour_data['date'], ciit=edit_tour_data['city'])
+        print("updating your artist tour")
+        print(edit_tour)
+        db.session.update(edit_tour)
+        db.session.commit()
+        return edit_tour
+
+    @classmethod
+    def validate_edit(cls, edit_tour_data): 
+        print(edit_tour_data)           
+        is_valid = True
+        if len(edit_tour_data['artist']) < 2:
+            is_valid = False
+            flash("A minimum of 2 characters is required.", "bad_artist")
+        if len(edit_tour_data['date']) < 2:   
+            is_valid = False
+            flash("Please enter a valid date.", "bad_date")
+        if len(edit_tour_data['city']) < 2:
+            is_valid = False
+            flash("Please enter a valid city.")
+
+        
+        return is_valid

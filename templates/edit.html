@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>Cool Band Site</title> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- linking an image -->
+    <!-- <img src="{{ url_for('static', filename='img') }}"> -->
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <link rel="stylesheet" href="../static/mobile.css">
+    <link rel="stylesheet" href="../static/css/edit.css">
+    <title>Edit Tour</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/edit" method="POST">
+            <fieldset>
+                <legend>
+                    <h2>Update Tour</h2>
+                </legend>
+                <div>
+                    <label for="artist">Artist:</label>
+                    <input type="text" name="artist" value="{{tour.artist}}">
+                    {% with errors = get_flashed_messages(category_filter=['bad_artist']) %}
+                    {% if errors %}
+                    {% for msg in errors %}
+                    <p class="errors">{{ msg }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input type="text" name="date" value="{{tour.date}}">
+                    {% with errors = get_flashed_messages(category_filter=['bad_date']) %}
+                    {% if errors %}
+                    {% for msg in errors %}
+                    <p class="errors">{{ msg }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div>
+                    <label for="city">City:</label>
+                    <input type="city" name="city" value="{{tour.city}}">
+                    {% with errors = get_flashed_messages(category_filter=['bad_city']) %}
+                    {% if errors %}
+                    {% for msg in errors %}
+                    <p class="errors">{{ msg }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <button class="btn btn-info btn-sm px-5 py-2 mb-5">Update</button>
+            </fieldset>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="../app.js"></script>
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </form>
+</body>
